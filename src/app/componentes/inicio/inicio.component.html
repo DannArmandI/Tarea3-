@@ -1,0 +1,22 @@
+
+
+    
+    <div ><img class=img-fluid src="../../assets/1.jpg"  alt="Imagen no disponible"></div> 
+
+
+    <div class="container">
+        <ul id=noticias>    
+            <li *ngFor="let noticia of listaNoticias">
+                <img class="img-thumbnail" src='../../../assets/{{noticia.img}}.jpg' alt='{{noticia.img}}'>
+                <h2 class= "{{noticia.color}}">{{noticia.titulo}}</h2>
+                <p>Autor:{{noticia.autor}} | Fecha {{noticia.fecha}}</p>
+                <button type="button" class="btn btn-info" [routerLink]="['/verMas',noticia.id]" routerLinkActive="router-link-active" >Ver más</button>
+            </li>
+        </ul>
+    </div>
+    
+
+
+
+
+
